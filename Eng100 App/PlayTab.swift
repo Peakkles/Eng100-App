@@ -1,63 +1,11 @@
 //
-//  ContentView.swift
+//  PlayTab.swift
 //  Eng100 App
 //
-//  Created by Sumit Dhar on 10/26/23.
+//  Created by Sumit Dhar on 11/5/23.
 //
 
 import SwiftUI
-import Charts
-let screenSize: CGRect = UIScreen.main.bounds
-
-
-struct HomePageView: View {
-
-    
-    var body: some View {
-        
-        
-        TabView {
-            Group {
-                    PlayTab()
-                    .tabItem {
-                        Label("Play",
-                              systemImage: "gamecontroller")
-                    }
-                Text("Tab 2")
-                    .tabItem {
-                        Label("data",
-                              systemImage: "chart.bar")
-                    }
-                
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.background)
-                        .ignoresSafeArea()
-                    Text("Tab 3")
-                }
-                    .tabItem {
-                        Label("Leaderboard",
-                              systemImage: "trophy")
-                    }
-                Text("Tab 4")
-                    .tabItem {
-                        Label("Settings",
-                              systemImage: "gearshape")
-                    }
-            }
-            .toolbarBackground(Color.black, for: .tabBar)
-            .toolbarBackground(.visible, for: .tabBar)
-        }
-    }
-}
-
-#Preview {
-    HomePageView()
-}
-
-
-
-
 
 struct PlayTab: View {
     @State var crossword: CrosswordData = Crosswords[0]
@@ -67,7 +15,7 @@ struct PlayTab: View {
     var body: some View {
         
         ZStack {
-            NavigationView {
+            NavigationStack {
                 ScrollView {
                     VStack {
                         LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 5)) {
@@ -88,9 +36,9 @@ struct PlayTab: View {
                                                height: screenSize.width/6)
                                         .border(.black)
                                         .background(crossword.answers[5*textField.row + textField.column] == "" ? Color(.black) : ((boxGrid.isRow && textField.row == boxGrid.rowSelected) || (!boxGrid.isRow && textField.column == boxGrid.columnSelected) ? Color(.yellow) : Color(.white)))
-                            
+                                    
                                         .disabled(crossword.answers[5*textField.row + textField.column] == "" ? true : false)
-                                    .multilineTextAlignment(.center)
+                                        .multilineTextAlignment(.center)
                                     
                                     if crossword.numbers.keys.contains(5*textField.row + textField.column) {
                                         HStack {
@@ -141,7 +89,7 @@ struct PlayTab: View {
                         .padding(.leading).padding(.top)
                         
                         Button("clear", action: {boxGrid.clear()})
-
+                        
                     }
                 }
                 .navigationTitle("Mini Crossword")
