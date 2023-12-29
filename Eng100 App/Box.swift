@@ -13,4 +13,5 @@ struct Box: Identifiable, Equatable {
     var row: Int
     var column: Int
     var color: Color = Color(.white)
+    var focused: Bool = false
 }

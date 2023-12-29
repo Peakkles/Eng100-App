@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431AA73B2B1427FD00035BC4 /* DataTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431AA73A2B1427FD00035BC4 /* DataTab.swift */; };
+		431AA73D2B14286C00035BC4 /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431AA73C2B14286C00035BC4 /* SettingsTab.swift */; };
 		439A47802AF0C68B0098A3F3 /* CrosswordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439A477F2AF0C68B0098A3F3 /* CrosswordData.swift */; };
 		43A237F72AEA1F83000AF1E0 /* Eng100_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A237F62AEA1F83000AF1E0 /* Eng100_AppApp.swift */; };
 		43A237F92AEA1F83000AF1E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A237F82AEA1F83000AF1E0 /* ContentView.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		431AA73A2B1427FD00035BC4 /* DataTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTab.swift; sourceTree = "<group>"; };
+		431AA73C2B14286C00035BC4 /* SettingsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
 		439A477F2AF0C68B0098A3F3 /* CrosswordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordData.swift; sourceTree = "<group>"; };
 		43A237F32AEA1F83000AF1E0 /* Eng100 App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eng100 App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A237F62AEA1F83000AF1E0 /* Eng100_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eng100_AppApp.swift; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				43A237F62AEA1F83000AF1E0 /* Eng100_AppApp.swift */,
+				431AA73C2B14286C00035BC4 /* SettingsTab.swift */,
 				43A237F82AEA1F83000AF1E0 /* ContentView.swift */,
 				43B1BBFF2AEA3DB3008F8918 /* SampleData.swift */,
 				439A477F2AF0C68B0098A3F3 /* CrosswordData.swift */,
@@ -70,6 +75,7 @@
 				43A237FC2AEA1F85000AF1E0 /* Preview Content */,
 				43B7E7752AF6C86C001969C5 /* BoxViewModel.swift */,
 				43F2BE272AF963C0002DF624 /* PlayTab.swift */,
+				431AA73A2B1427FD00035BC4 /* DataTab.swift */,
 			);
 			path = "Eng100 App";
 			sourceTree = "<group>";
@@ -153,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B7E7762AF6C86C001969C5 /* BoxViewModel.swift in Sources */,
+				431AA73B2B1427FD00035BC4 /* DataTab.swift in Sources */,
 				43A237F92AEA1F83000AF1E0 /* ContentView.swift in Sources */,
+				431AA73D2B14286C00035BC4 /* SettingsTab.swift in Sources */,
 				43B1BC002AEA3DB3008F8918 /* SampleData.swift in Sources */,
 				439A47802AF0C68B0098A3F3 /* CrosswordData.swift in Sources */,
 				43F2BE282AF963C0002DF624 /* PlayTab.swift in Sources */,

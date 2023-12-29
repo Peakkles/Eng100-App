@@ -61,6 +61,7 @@ struct PlayTab: View {
                         HStack {
                             VStack {
                                 Text("Across")
+//                                    .font(.system(size: 18))
                                     .underline()
                                 ForEach($crossword.AcrossClues, id: \.self) { $clue in
                                     HStack {
@@ -100,7 +101,7 @@ struct PlayTab: View {
                     .foregroundStyle(Color(.white))
                     .font(.largeTitle)
                     .frame(width: screenSize.width/2, height: screenSize.height/4)
-                    .background(Color(.red))
+                    .background(Color(.blue))
                     .cornerRadius(10)
             }
         }
